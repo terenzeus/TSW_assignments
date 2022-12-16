@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
+# In[9]:
 
 
 import pandas as pd
-import os
 from pandas_datareader import data
 
 companies = ["AAPL", "GOOGl", "MSFT", "IBM", "FB"]
@@ -13,11 +12,11 @@ companies = ["AAPL", "GOOGl", "MSFT", "IBM", "FB"]
 for company in companies:
     finance_data = data.DataReader(company, start="2010-01-01", end="2022-12-31", data_source="yahoo")
     finance_data.to_csv(company + ".csv")
-    file_path = 'C:/Users/User/Desktop/Work/Financial_data'
-    finance_data.to_csv(file_path, index=False)
+    #file_path = 'C:/Users/User/Desktop/Work/Financial_data'
+    #finance_data.to_csv(file_path, index=False)
 
 
-# In[5]:
+# In[10]:
 
 
 print(finance_data.head())
