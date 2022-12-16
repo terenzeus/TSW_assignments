@@ -53,7 +53,7 @@ def get_stock_data_for_company(company_id: str):
 
 # POST/Patch API to update stock data for a company by date
 
-# In[5]:
+# In[7]:
 
 
 from fastapi import FastAPI, HTTPException
@@ -67,6 +67,8 @@ def update_stock_data_for_company(company_id: str, date: str, data: dict):
     update_stock_data(company_id, date, data)
     return 'Stock data updated successfully'
 
+
+# For retrieving and updating data
 
 # In[6]:
 
